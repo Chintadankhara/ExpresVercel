@@ -1,12 +1,13 @@
-// api/index.js
 import express from "express";
-import { createServer } from "http";
-import { default as serverless } from "serverless-http";
 
 const app = express();
 
-app.get("/", (req, res) => {
-  res.send("Hello World !");
-});
+const PORT = 3000;
 
-export default serverless(app);
+app.get("/",(req, res)=>{
+  res.send("Hello in chintan !");
+})
+
+app.listen(PORT, ()=>{
+  `Server start on a port ${PORT}`;
+})
